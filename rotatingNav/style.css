@@ -66,7 +66,7 @@ body {
 
 .circle button#close {
   top: 60%;
-  transform: rotate(90deg);
+  transform: rotate(85deg);
   transform-origin: top left;
 }
 

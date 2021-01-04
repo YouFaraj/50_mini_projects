@@ -9,6 +9,9 @@
   --right-vg-color: rgba(43, 43, 43, 0.8);
   --left-btn-hover-color: rgba(87, 84, 236, 1);
   --right-btn-hover-color: rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
 }
 
 body {
@@ -69,6 +72,10 @@ h1 {
   overflow: hidden;
 }
 
+.split.right, .split.left, .split.right::before, .split.left::before {
+  transition: all var(--speed) ease-in-out;
+}
+
 .split.left {
   left: 0;
   background-image: url("https://i.gadgets360cdn.com/large/ps5_ps5_digital_edition_1600286572510.jpg?downsize=950:*&output-quality=80");
@@ -100,3 +107,32 @@ h1 {
   height: 100%;
   background-color: var(--right-vg-color);
 }
+
+.hover-left .left{
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .left{
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+    top: 30%;
+  }
+  .btn {
+    width: 8rem;
+    padding: 1.2rem;
+  }
+}
+

@@ -5,9 +5,9 @@
 body {
   display: flex;
   flex-direction: column;
+  overflow: wrap;
   width: 95vw;
   max-width: 1350px;
-  height: 100vh;
   font-family: "Avenir", sans-serif;
   background: linear-gradient(180deg, #f6fafd 0%, #ffffff 19.4%);
   margin: 2rem auto;
@@ -41,7 +41,7 @@ a {
   margin-right: 6rem;
   display: flex;
   position: relative;
-  left: -40px;
+  left: -3%;
   height: 100%;
 }
 
@@ -89,7 +89,13 @@ a {
 /* nav bar -------------------------- end ------------------------ */
 /* main content --------------------- start ---------------------- */
 .main-content {
-  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 6rem;
+  background-image: url("image1.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 75%;
 }
 
 .main-title {
@@ -111,17 +117,17 @@ a {
   line-height: 1.8rem;
   letter-spacing: 0em;
   text-align: left;
-  color: #4B5D68;
+  color: #4b5d68;
 }
 
 .main-button {
-  background-color: #9C69E2;
+  background-color: #9c69e2;
   width: 11rem;
   height: 3.5rem;
   border: 0;
   border-radius: 50px;
   font-family: inherit;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 1.5rem 0;
   font-size: 1.1rem;
   font-weight: 800;
@@ -129,12 +135,119 @@ a {
   letter-spacing: 0;
 }
 
-.main-image {
-  position: absolute;
-  width: 70%;
-  top: 30%;
-  right: 0;
-  z-index: -1;
+/* main-content ------------------ end ------------- */
+/* whoWeAre-content ------------- start ------------ */
+
+.who-we-are-content {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 6rem;
+  width: 90%;
+  height: 80%;
+  padding: 2rem;
+  background: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
 }
 
-/* main-content------------------ end ------------- */
+.who-we-are-image {
+  padding: 1rem;
+  width: 50%;
+  height: 50%;
+}
+
+.who-we-are-wrapper {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.who-we-are-title {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #212353;
+}
+
+.who-we-are-p {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 160%;
+  width: 80%;
+  color: #4B5D68;
+}
+
+/* who-we-are ----------------- end ------------------ */
+/* feature ------------------ start ------------------ */
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  padding: 3rem;
+  margin-right: 5%;
+}
+
+.feature-title {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.feature-p {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+  width: 50%;
+  padding: 1rem;
+}
+
+.feature-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+.feature-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 1rem 1rem 1rem 4rem;
+}
+
+.feature-inner-container {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.feature-image {
+  z-index: -1;
+  position: absolute;
+  left: -25%;
+  top: 35%;
+}
+
+.feature-card-button {
+  border: 0;
+
+}

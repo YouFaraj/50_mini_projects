@@ -4,13 +4,17 @@ const textarea = document.getElementById("textarea");
 textarea.focus();
 
 textarea.addEventListener("keyup", (e) => {
+  if(e.target.value.trim() !== "") {
+    if(e.key === "Enter") {
+      setTimeout(() => e.target.value = "", 10)
+      randomSelect();
+    }
 
-  if(e.key === "Enter") {
-    setTimeout(() => e.target.value = "", 10)
-    randomSelect();
+    createTags(e.target.value);
+  } else {
+    return;
   }
 
-  createTags(e.target.value);
 })
 
 function createTags(input) {
